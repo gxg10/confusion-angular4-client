@@ -10,6 +10,8 @@ import { AboutComponent } from '../about/about.component';
 import { ContactComponent } from '../contact/contact.component';
 import { FavoritesComponent } from '../favorites/favorites.component';
 import { FeedbackComponent } from '../feedback/feedback.component';
+import { StiriComponent } from '../stiri/stiri.component';
+import { NewsComponent } from '../news/news.component';
 
 
 export const routes: Routes = [
@@ -19,6 +21,8 @@ export const routes: Routes = [
   { path: 'favorites',     component: FavoritesComponent },
   { path: 'contactus',     component: ContactComponent },
   { path: 'feedbacks', component: FeedbackComponent},
+  { path: 'stiri', component: StiriComponent},
+  { path: 'news', component: NewsComponent},
   { path: 'dishdetail/:id',     component: DishdetailComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];

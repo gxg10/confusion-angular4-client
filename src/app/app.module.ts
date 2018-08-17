@@ -30,6 +30,8 @@ import { FeedbackService } from './services/feedback.service';
 import { AuthService } from './services/auth.service';
 import { AuthInterceptor, UnauthorizedInterceptor } from './services/auth.interceptor';
 import { FavoriteService } from './services/favorite.service';
+import { StiriService } from './services/stiri.service';
+
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
 
@@ -40,6 +42,8 @@ import { RestangularConfigFactory } from './shared/restConfig';
 import { HighlightDirective } from './directives/highlight.directive';
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import { FeedbackComponent } from './feedback/feedback.component';
+import { StiriComponent } from './stiri/stiri.component';
+import { NewsComponent } from './news/news.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +58,9 @@ import { FeedbackComponent } from './feedback/feedback.component';
     LoginComponent,
     HighlightDirective,
     FavoritesComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    StiriComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
@@ -79,6 +85,7 @@ import { FeedbackComponent } from './feedback/feedback.component';
     FeedbackService,
     AuthService,
     FavoriteService,
+    StiriService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
