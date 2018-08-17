@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { FeedbackService } from '../services/feedback.service';
 import { Feedback, ContactType } from '../shared/feedback';
 
@@ -9,11 +9,13 @@ import { Feedback, ContactType } from '../shared/feedback';
 })
 export class FeedbackComponent implements OnInit {
 
-	feed = Feedback;
+	feedback : Feedback[];
 
-  constructor() { }
+  constructor(private feedbackService: FeedbackService) { }
 
   ngOnInit() {
+  this.feedbackService.getFeedback()
+  .subscribe(feedback => this.feedback = feedback);
   }
 
 

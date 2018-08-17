@@ -5,6 +5,9 @@ import { Observable } from 'rxjs/Observable';
 import { baseURL } from '../shared/baseurl';
 import { ProcessHTTPMsgService } from './process-httpmsg.service';
 
+import 'rxjs/add/operator/delay';
+import 'rxjs/add/operator/catch';
+
 @Injectable()
 export class FeedbackService {
 
